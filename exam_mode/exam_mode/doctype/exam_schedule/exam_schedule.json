@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{test_type}-{##}",
+ "creation": "2023-09-28 11:57:07.088590",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "date_of_birth",
+  "patient_gender",
+  "test_type",
+  "doctor",
+  "column_break_hnwaa",
+  "date_of_test",
+  "time_of_test",
+  "status",
+  "testing_area"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient_name.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fetch_from": "patient_name.patient_gender",
+   "fieldname": "patient_gender",
+   "fieldtype": "Select",
+   "label": "Patient Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "date_of_test",
+   "fieldtype": "Date",
+   "label": "Date Of Test"
+  },
+  {
+   "fieldname": "time_of_test",
+   "fieldtype": "Time",
+   "label": "Time of Test"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOngoing\nCompleted\ncanceled"
+  },
+  {
+   "fieldname": "testing_area",
+   "fieldtype": "Data",
+   "label": "Testing Area"
+  },
+  {
+   "fieldname": "column_break_hnwaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
+  },
+  {
+   "fetch_from": "patient_name.test_type",
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "label": "Test Type",
+   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-28 17:24:48.153233",
+ "modified_by": "Administrator",
+ "module": "exam_mode",
+ "name": "Exam Schedule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Schedule"
+  },
+  {
+   "color": "Orange",
+   "title": "Completed"
+  },
+  {
+   "color": "Purple",
+   "title": "canceled"
+  }
+ ]
+}

@@ -80,6 +80,13 @@ app_license = "MIT"
 # before_app_install = "exam_mode.utils.before_app_install"
 # after_app_install = "exam_mode.utils.after_app_install"
 
+
+fixtures = [{"dt":"Website Slideshow"},
+            {"dt":"Website Settings"},
+            {"dt":"Web Page"}]
+
+
+
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps

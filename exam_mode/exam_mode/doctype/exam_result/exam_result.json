@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{exam schedule}-{approval status}-{##}",
+ "creation": "2023-09-28 13:14:54.289764",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exam_schedule",
+  "examiner",
+  "grading",
+  "column_break_sgjat",
+  "approval_status",
+  "comment",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "examiner.scheduled_exam",
+   "fieldname": "exam_schedule",
+   "fieldtype": "Link",
+   "label": "Exam Schedule",
+   "options": "Exam Schedule"
+  },
+  {
+   "fieldname": "examiner",
+   "fieldtype": "Link",
+   "label": "Examiner",
+   "options": "Assigned Examiner"
+  },
+  {
+   "fieldname": "grading",
+   "fieldtype": "Link",
+   "label": "Grading",
+   "options": "Grading Scale"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "\nPending\nApproved\nRe-Examation"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Data",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "column_break_sgjat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Result",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-28 17:30:22.505130",
+ "modified_by": "Administrator",
+ "module": "exam_mode",
+ "name": "Exam Result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

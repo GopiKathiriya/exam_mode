@@ -1,0 +1,39 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Website Slideshow",
+  "header": null,
+  "modified": "2023-09-28 15:49:41.100382",
+  "name": "medical",
+  "slideshow_items": [
+   {
+    "description": null,
+    "heading": null,
+    "image": "https://www.shutterstock.com/shutterstock/photos/1874538058/display_1500/stock-vector-clipboard-with-stethoscope-medical-check-form-report-health-checkup-concept-metaphor-illustration-1874538058.jpg",
+    "parent": "medical",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   },
+   {
+    "description": null,
+    "heading": null,
+    "image": "https://cdn4.vectorstock.com/i/1000x1000/02/28/medical-check-up-with-man-doctor-characters-vector-4590228.jpg",
+    "parent": "medical",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   },
+   {
+    "description": null,
+    "heading": null,
+    "image": "https://www.ethika.co.in/wp-content/uploads/2022/06/annual-health-checkup.jpg",
+    "parent": "medical",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   }
+  ],
+  "slideshow_name": "medical"
+ }
+]
