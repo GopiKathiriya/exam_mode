@@ -81,9 +81,25 @@ app_license = "MIT"
 # after_app_install = "exam_mode.utils.after_app_install"
 
 
-fixtures = [{"dt":"Website Slideshow"},
-            {"dt":"Website Settings"},
-            {"dt":"Web Page"}]
+fixtures = [
+    {
+        "dt": "Custom DocPerm",
+        "filter": [
+            ["role", "in", ["Doctor", "Patirnt", "Receptionist"]],
+            ["parent", "in", ["Patient", "Exam Schedule", "Fee Collection","Assign Examiner","Exam Result","Granding Scale","Doctor","Medical Staff","Feedback Form"]]
+        ]
+    },
+    {
+        "dt": "Website Slideshow"
+    },
+    {
+        "dt": "Website Settings"
+    },
+    {
+        "dt": "Web Page"
+    }
+]
+
 
 
 
