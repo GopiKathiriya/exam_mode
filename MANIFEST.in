@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include exam_mode *.css
+recursive-include exam_mode *.csv
+recursive-include exam_mode *.html
+recursive-include exam_mode *.ico
+recursive-include exam_mode *.js
+recursive-include exam_mode *.json
+recursive-include exam_mode *.md
+recursive-include exam_mode *.png
+recursive-include exam_mode *.py
+recursive-include exam_mode *.svg
+recursive-include exam_mode *.txt
+recursive-exclude exam_mode *.pyc
