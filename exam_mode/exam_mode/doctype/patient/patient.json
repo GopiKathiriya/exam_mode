@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{ patient}-{##}",
+ "autoname": "format:{ patient_name}-{##}",
  "creation": "2023-09-28 11:52:18.841884",
  "default_view": "List",
  "doctype": "DocType",
@@ -56,7 +56,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-28 18:33:08.893436",
+ "modified": "2023-09-29 15:04:23.778881",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Patient",

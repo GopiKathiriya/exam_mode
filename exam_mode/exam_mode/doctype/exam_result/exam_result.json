@@ -10,6 +10,7 @@
  "field_order": [
   "patient_name",
   "exam_schedule",
+  "date_of_test",
   "grading",
   "column_break_sgjat",
   "approval_status",
@@ -68,12 +69,18 @@
    "label": "Status",
    "options": "\nDraft\nPending\nApproved\nRejected",
    "read_only": 1
+  },
+  {
+   "fetch_from": "exam_schedule.date_of_test",
+   "fieldname": "date_of_test",
+   "fieldtype": "Data",
+   "label": "Date Of Test"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-29 14:30:06.195101",
+ "modified": "2023-09-29 15:39:42.206708",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Result",
