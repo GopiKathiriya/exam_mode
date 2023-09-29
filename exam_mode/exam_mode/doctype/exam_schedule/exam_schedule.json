@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{patient_name}-{##}",
+ "autoname": "format:{patient_name}-{test_type}",
  "creation": "2023-09-28 11:57:07.088590",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,6 +10,7 @@
  "field_order": [
   "patient_name",
   "date_of_birth",
+  "age",
   "patient_gender",
   "test_type",
   "doctor",
@@ -96,11 +97,17 @@
    "options": "Exam Schedule",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "patient_name.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 15:40:40.166729",
+ "modified": "2023-09-29 16:52:02.564074",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",

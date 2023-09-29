@@ -6,7 +6,14 @@ import frappe
 from frappe.model.document import Document
 
 class Patient(Document):
-    pass
+    def validate(self):
+        self.compute_age()
+
+    def compute_age(self):
+        if self.date_of_birth:
+            age_in_days = frappe.utils.date_diff(frappe.utils.today(), self.date_of_birth)
+            self.age = age_in_days // 365
+
     # def before_insert(doc):
     #    if doc.doctype == "Patient":
  

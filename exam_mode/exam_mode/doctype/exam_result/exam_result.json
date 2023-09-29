@@ -10,17 +10,15 @@
  "field_order": [
   "patient_name",
   "exam_schedule",
-  "date_of_test",
-  "grading",
+  "age",
   "column_break_sgjat",
-  "approval_status",
+  "grading",
   "comment",
   "amended_from",
   "status"
  ],
  "fields": [
   {
-   "fetch_from": "amended_from.exam_schedule",
    "fieldname": "exam_schedule",
    "fieldtype": "Link",
    "label": "Exam Schedule",
@@ -31,12 +29,6 @@
    "fieldtype": "Link",
    "label": "Grading",
    "options": "Grading Scale"
-  },
-  {
-   "fieldname": "approval_status",
-   "fieldtype": "Select",
-   "label": "Approval Status",
-   "options": "\nApproved\nRe-Examation"
   },
   {
    "fieldname": "comment",
@@ -59,8 +51,10 @@
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "patient name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -71,16 +65,16 @@
    "read_only": 1
   },
   {
-   "fetch_from": "exam_schedule.date_of_test",
-   "fieldname": "date_of_test",
+   "fetch_from": "patient_name.age",
+   "fieldname": "age",
    "fieldtype": "Data",
-   "label": "Date Of Test"
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-29 15:39:42.206708",
+ "modified": "2023-09-29 17:13:51.655624",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Result",

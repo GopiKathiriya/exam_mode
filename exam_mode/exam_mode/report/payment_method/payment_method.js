@@ -14,7 +14,7 @@ frappe.query_reports["Payment Method"] = {
 			'fieldname': 'test_type',
 			'label': 'Test Type',
 			'fieldtype': 'Select',
-			'options':['Blood Test','X-ray','MIR','Diabetes']
+			'options':['Blood Test','X-ray','MRI','Diabetes']
 		},
 
 	]
