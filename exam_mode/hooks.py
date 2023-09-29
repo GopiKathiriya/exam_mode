@@ -6,7 +6,7 @@ app_publisher = "frappe"
 app_description = "exam_mode"
 app_email = "frappe@gmail.com"
 app_license = "MIT"
-
+app_logo_url = "/assets/exam_mode/img/aaaa.jpg"
 # Includes in <head>
 # ------------------
 
