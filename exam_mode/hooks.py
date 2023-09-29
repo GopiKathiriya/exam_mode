@@ -100,6 +100,11 @@ fixtures = [
     },
     {
         "dt": "Workflow State"
+    },
+ 
+    {
+        "dt": "Dashboard"
+        
     }
 ]
 
