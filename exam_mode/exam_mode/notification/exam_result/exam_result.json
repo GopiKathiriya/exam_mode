@@ -5,13 +5,13 @@
  "days_in_advance": 0,
  "docstatus": 0,
  "doctype": "Notification",
- "document_type": "Exam Result",
+ "document_type": "Fee Collection",
  "enabled": 1,
- "event": "Submit",
+ "event": "Save",
  "idx": 0,
  "is_standard": 1,
  "message": "Add your message here",
- "modified": "2023-09-28 17:31:45.729522",
+ "modified": "2023-09-29 17:36:45.539908",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Result",
@@ -23,5 +23,5 @@
  ],
  "send_system_notification": 0,
  "send_to_all_assignees": 0,
- "subject": "Exam Result{{doc.name}}"
+ "subject": "Fee Collection{{doc.name}}"
 }
