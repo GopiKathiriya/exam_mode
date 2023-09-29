@@ -35,18 +35,19 @@ def get_columns():
             'label': 'Count',
             'fieldtype': 'Int'
         },
+      
     ]
     return columns
 
 def get_gym_member(filters=None):
     class_counts = {
         "Blood Test": 0,
-        "MIR": 0,
+        "MRI": 0,
         "X-Ray": 0,
         "Diabetes":0
     }
 
-    data1 = frappe.db.get_list("Exam Schedule", fields=["test_type"])
+    data1 = frappe.db.get_list("Exam Schedule", fields=["test_type",])
     for exam_schedule in data1:
         test_type = exam_schedule.get("test_type")
         if test_type in class_counts:

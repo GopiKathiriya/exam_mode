@@ -8,7 +8,6 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "patient_name",
   "test_type",
   "grading_criteria"
  ],
@@ -25,17 +24,11 @@
    "fieldtype": "Select",
    "label": "Grading Criteria",
    "options": "\nLow\nNormal\nHigh"
-  },
-  {
-   "fieldname": "patient_name",
-   "fieldtype": "Link",
-   "label": "Patient Name",
-   "options": "Patient"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 11:03:47.467910",
+ "modified": "2023-09-29 17:14:32.064873",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Grading Scale",

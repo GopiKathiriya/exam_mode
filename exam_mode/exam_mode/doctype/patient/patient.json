@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{ patient}-{##}",
+ "autoname": "format:{ patient_name}-{##}",
  "creation": "2023-09-28 11:52:18.841884",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,6 +10,7 @@
  "field_order": [
   "patient_name",
   "date_of_birth",
+  "age",
   "patient_gender",
   "column_break_un9n1",
   "test_type",
@@ -52,11 +53,16 @@
    "fieldtype": "Select",
    "label": "Test Type",
    "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-28 18:33:08.893436",
+ "modified": "2023-09-29 16:04:02.032499",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Patient",

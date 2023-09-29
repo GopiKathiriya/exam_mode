@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{test_type}-{##}",
+ "autoname": "format:{patient_name}-{test_type}",
  "creation": "2023-09-28 11:57:07.088590",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,6 +10,7 @@
  "field_order": [
   "patient_name",
   "date_of_birth",
+  "age",
   "patient_gender",
   "test_type",
   "doctor",
@@ -24,8 +25,10 @@
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fetch_from": "patient_name.date_of_birth",
@@ -43,12 +46,16 @@
   {
    "fieldname": "date_of_test",
    "fieldtype": "Date",
-   "label": "Date Of Test"
+   "in_list_view": 1,
+   "label": "Date Of Test",
+   "reqd": 1
   },
   {
    "fieldname": "time_of_test",
    "fieldtype": "Time",
-   "label": "Time of Test"
+   "in_list_view": 1,
+   "label": "Time of Test",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -77,8 +84,10 @@
    "fetch_from": "patient_name.test_type",
    "fieldname": "test_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Test Type",
-   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
+   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -88,12 +97,17 @@
    "options": "Exam Schedule",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "patient_name.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-09-29 11:25:11.924346",
+ "modified": "2023-09-29 16:52:02.564074",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
