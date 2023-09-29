@@ -55,7 +55,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 11:21:57.761430",
+ "modified": "2023-09-29 11:42:23.391319",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Doctor",
@@ -101,5 +101,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "department"
 }

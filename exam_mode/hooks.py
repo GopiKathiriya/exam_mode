@@ -125,9 +125,9 @@ fixtures = [
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
+}
 #
 # has_permission = {
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -145,13 +145,10 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+    "before_insert": "exam_mode.exam_mode.doctype.patient.patient.before_insert"
+}
+
 
 # Scheduled Tasks
 # ---------------

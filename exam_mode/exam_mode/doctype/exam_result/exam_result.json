@@ -1,34 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{exam schedule}-{approval status}-{##}",
+ "autoname": "format:{patient_name}-{exam_schedule}-{##}",
  "creation": "2023-09-28 13:14:54.289764",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "patient_name",
   "exam_schedule",
-  "examiner",
   "grading",
   "column_break_sgjat",
   "approval_status",
   "comment",
-  "amended_from"
+  "amended_from",
+  "status"
  ],
  "fields": [
   {
-   "fetch_from": "examiner.scheduled_exam",
+   "fetch_from": "amended_from.exam_schedule",
    "fieldname": "exam_schedule",
    "fieldtype": "Link",
    "label": "Exam Schedule",
    "options": "Exam Schedule"
-  },
-  {
-   "fieldname": "examiner",
-   "fieldtype": "Link",
-   "label": "Examiner",
-   "options": "Assigned Examiner"
   },
   {
    "fieldname": "grading",
@@ -40,7 +35,7 @@
    "fieldname": "approval_status",
    "fieldtype": "Select",
    "label": "Approval Status",
-   "options": "\nPending\nApproved\nRe-Examation"
+   "options": "\nApproved\nRe-Examation"
   },
   {
    "fieldname": "comment",
@@ -59,12 +54,26 @@
    "options": "Exam Result",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "patient name",
+   "options": "Patient"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nRejected",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-28 18:36:19.209841",
+ "modified": "2023-09-29 14:30:06.195101",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Result",
@@ -84,7 +93,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -92,12 +100,10 @@
    "read": 1,
    "report": 1,
    "role": "Doctor",
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -105,6 +111,7 @@
    "report": 1,
    "role": "Receptionist",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
