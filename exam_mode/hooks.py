@@ -85,8 +85,8 @@ fixtures = [
     {
         "dt": "Custom DocPerm",
         "filter": [
-            ["role", "in", ["Doctor", "Patirnt", "Receptionist"]],
-            ["parent", "in", ["Patient", "Exam Schedule", "Fee Collection","Assign Examiner","Exam Result","Granding Scale","Doctor","Medical Staff","Feedback Form"]]
+            ["role", "in", ["Doctor", "Patient", "Receptionist"]],
+            ["parent", "in", ["Patient", "Exam Schedule", "Fee Collection","Assign Examiner","Exam Result","Grading Scale","Doctor","Medical Staff","Feedback Form"]]
         ]
     },
     {
@@ -97,8 +97,12 @@ fixtures = [
     },
     {
         "dt": "Web Page"
+    },
+    {
+        "dt": "Workflow State"
     }
 ]
+
 
 
 

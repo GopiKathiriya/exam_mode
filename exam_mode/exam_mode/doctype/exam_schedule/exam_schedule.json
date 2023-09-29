@@ -17,7 +17,8 @@
   "date_of_test",
   "time_of_test",
   "status",
-  "testing_area"
+  "testing_area",
+  "amended_from"
  ],
  "fields": [
   {
@@ -50,10 +51,12 @@
    "label": "Time of Test"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nOngoing\nCompleted\ncanceled"
+   "options": "\nDraft\nPending\nApproved\nCancelled",
+   "read_only": 1
   },
   {
    "fieldname": "testing_area",
@@ -76,11 +79,21 @@
    "fieldtype": "Select",
    "label": "Test Type",
    "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Schedule",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-28 17:24:48.153233",
+ "modified": "2023-09-29 11:25:11.924346",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
@@ -106,9 +119,11 @@
    "read": 1,
    "report": 1,
    "role": "Doctor",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
+   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -116,10 +131,10 @@
    "read": 1,
    "report": 1,
    "role": "Receptionist",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
-   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
