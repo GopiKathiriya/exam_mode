@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{patient_name}-{test_type}-{##}",
+ "creation": "2023-09-30 11:24:21.748157",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "age",
+  "test_type",
+  "column_break_amvlb",
+  "exam_date",
+  "result_date",
+  "patient_gender",
+  "section_break_wiful",
+  "test"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "patient name",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient_name.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Link",
+   "label": "Test Type",
+   "options": "Test Type"
+  },
+  {
+   "fieldname": "result_date",
+   "fieldtype": "Date",
+   "label": "Result Date"
+  },
+  {
+   "fieldname": "exam_date",
+   "fieldtype": "Data",
+   "label": "Exam Date"
+  },
+  {
+   "fetch_from": "patient_name.patient_gender",
+   "fieldname": "patient_gender",
+   "fieldtype": "Data",
+   "label": " Patient Gender"
+  },
+  {
+   "fieldname": "section_break_wiful",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Table",
+   "label": "Test",
+   "options": "Test"
+  },
+  {
+   "fieldname": "column_break_amvlb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-30 13:44:25.073583",
+ "modified_by": "Administrator",
+ "module": "exam_mode",
+ "name": "Test Result",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

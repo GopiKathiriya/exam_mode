@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-09-28 17:51:53.999140",
+ "modified": "2023-09-29 18:21:16.399420",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",
@@ -24,9 +24,6 @@
   },
   {
    "role": "Doctor"
-  },
-  {
-   "role": "Patient"
   },
   {
    "role": "Receptionist"

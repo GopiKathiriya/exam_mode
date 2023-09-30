@@ -1,42 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2023-09-28 12:15:20.015183",
+ "autoname": "format:{test_name}",
+ "creation": "2023-09-30 11:25:44.397688",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "patient_name",
-  "exam_experience_rating",
-  "feedback_comment"
+  "test_name"
  ],
  "fields": [
   {
-   "fieldname": "patient_name",
-   "fieldtype": "Link",
-   "label": "Patient Name",
-   "options": "Patient"
-  },
-  {
-   "fieldname": "exam_experience_rating",
-   "fieldtype": "Rating",
-   "label": "Exam Experience Rating"
-  },
-  {
-   "fieldname": "feedback_comment",
+   "fieldname": "test_name",
    "fieldtype": "Data",
-   "label": "Feedback Comment"
+   "label": "Test Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 10:48:43.934613",
+ "modified": "2023-09-30 11:42:07.427798",
  "modified_by": "Administrator",
  "module": "exam_mode",
- "name": "Feedback Form",
- "naming_rule": "Set by user",
+ "name": "Test Type",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -11,9 +11,8 @@
   "patient_name",
   "date_of_birth",
   "age",
-  "patient_gender",
   "column_break_un9n1",
-  "test_type",
+  "patient_gender",
   "address",
   "contact_number"
  ],
@@ -49,20 +48,15 @@
    "label": "Contact Number"
   },
   {
-   "fieldname": "test_type",
-   "fieldtype": "Select",
-   "label": "Test Type",
-   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
-  },
-  {
    "fieldname": "age",
    "fieldtype": "Data",
-   "label": "Age"
+   "label": "Age",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 16:04:02.032499",
+ "modified": "2023-09-30 10:46:53.433137",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Patient",
@@ -78,39 +72,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Doctor",
-   "share": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Receptionist",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Patient",
    "share": 1,
    "write": 1
   }
