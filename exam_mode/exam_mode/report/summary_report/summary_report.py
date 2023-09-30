@@ -18,7 +18,7 @@ def execute(filters=None):
         	],
         },
     }
-    return columns, data, "calories report", chart
+    return columns, data, "summary report", chart
   
    
 
