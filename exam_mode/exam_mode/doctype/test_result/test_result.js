@@ -17,7 +17,8 @@ frappe.ui.form.on('Test Result', {
                             console.log(i);
                             frm.add_child('test', {
                                 investigation: i.investigation,
-								reference_value: i.reference_value
+								reference_value: i.reference_value,
+								grading_scale: i.grading_scale
                             });
                         });
                         frm.refresh_field("test");

@@ -5,6 +5,12 @@
 frappe.query_reports["Payment Method"] = {
 	"filters": [
 		{
+			'fieldname': 'payment_name',
+			'label': 'Payment Name',
+			'fieldtype': 'Link',
+			'options': 'Patient'
+		},
+		{
 			'fieldname': 'payment_method',
 			'label': 'Payment Method',
 			'fieldtype': 'Select',
