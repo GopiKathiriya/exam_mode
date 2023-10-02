@@ -5,8 +5,8 @@
 frappe.query_reports["Payment Method"] = {
 	"filters": [
 		{
-			'fieldname': 'payment_name',
-			'label': 'Payment Name',
+			'fieldname': 'patient_name',
+			'label': 'Patient Name',
 			'fieldtype': 'Link',
 			'options': 'Patient'
 		},
@@ -14,13 +14,13 @@ frappe.query_reports["Payment Method"] = {
 			'fieldname': 'payment_method',
 			'label': 'Payment Method',
 			'fieldtype': 'Select',
-			'options': ['Cash On Delivery','Online']
+			'options': ['By Cash','Online']
 		},
 		{
 			'fieldname': 'test_type',
 			'label': 'Test Type',
-			'fieldtype': 'Select',
-			'options':['Blood Test','X-ray','MRI','Diabetes']
+			'fieldtype': 'Link',
+			'options': 'Test Type'
 		},
 
 	]

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{test_type}-{payment_method}",
+ "autoname": "format:{patient_name}-{payment_method}",
  "creation": "2023-09-30 14:55:19.576071",
  "default_view": "List",
  "doctype": "DocType",
@@ -63,7 +63,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-02 14:40:42.510754",
+ "modified": "2023-10-02 16:33:30.691672",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",
