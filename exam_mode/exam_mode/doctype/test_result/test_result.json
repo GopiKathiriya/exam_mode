@@ -12,7 +12,7 @@
   "age",
   "test_type",
   "column_break_amvlb",
-  "exam_date",
+  "date_of_test",
   "result_date",
   "patient_gender",
   "section_break_wiful",
@@ -39,14 +39,10 @@
    "options": "Test Type"
   },
   {
+   "fetch_from": "exam_schedule.test_type",
    "fieldname": "result_date",
    "fieldtype": "Date",
    "label": "Result Date"
-  },
-  {
-   "fieldname": "exam_date",
-   "fieldtype": "Data",
-   "label": "Exam Date"
   },
   {
    "fetch_from": "patient_name.patient_gender",
@@ -67,11 +63,17 @@
   {
    "fieldname": "column_break_amvlb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "exam_schedule.date_of_test",
+   "fieldname": "date_of_test",
+   "fieldtype": "Date",
+   "label": "Date Of Test"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 13:44:25.073583",
+ "modified": "2023-10-02 12:45:52.422665",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",

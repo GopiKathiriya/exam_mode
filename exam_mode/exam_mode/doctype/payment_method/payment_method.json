@@ -9,62 +9,54 @@
  "engine": "InnoDB",
  "field_order": [
   "patient_name",
-  "test_type",
-  "column_break_r4mgr",
+  "contact_no",
   "payment_method",
   "fee_amount",
-  "card_detail_section",
-  "card_number",
-  "expiry_date"
+  "section_break_wfqm1",
+  "online_payment"
  ],
  "fields": [
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Patient Name",
    "options": "Patient"
   },
   {
-   "fetch_from": "patient_name.test_type",
-   "fieldname": "test_type",
-   "fieldtype": "Select",
-   "label": "Test Type",
-   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes"
-  },
-  {
-   "fieldname": "column_break_r4mgr",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "payment_method",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Payment Method",
-   "options": "\nCash On Delivery\nOnline"
+   "options": "\nBy Cash\nOnline"
   },
   {
    "fieldname": "fee_amount",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Fee Amount"
   },
   {
-   "fieldname": "card_detail_section",
-   "fieldtype": "Section Break",
-   "label": "Card Detail"
+   "fieldname": "section_break_wfqm1",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "card_number",
+   "fetch_from": "patient_name.contact_number",
+   "fieldname": "contact_no",
    "fieldtype": "Data",
-   "label": "Card Number"
+   "label": "Contact No"
   },
   {
-   "fieldname": "expiry_date",
-   "fieldtype": "Date",
-   "label": "Expiry Date"
+   "depends_on": "eval:doc.payment_method == \"Online\"",
+   "fieldname": "online_payment",
+   "fieldtype": "Table",
+   "label": "Online Payment",
+   "options": "Online Payment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 14:55:19.576071",
+ "modified": "2023-10-02 11:36:21.339082",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",

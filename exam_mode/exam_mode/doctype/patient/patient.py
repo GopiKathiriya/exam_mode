@@ -14,20 +14,23 @@ class Patient(Document):
             age_in_days = frappe.utils.date_diff(frappe.utils.today(), self.date_of_birth)
             self.age = age_in_days // 365
 
-    # def before_insert(doc):
-    #    if doc.doctype == "Patient":
+    def before_insert(doc):
+        if doc.doctype == "Patient":
+            patient_name = doc.patient_name
+
+       
+        patient_name_cleaned = ''.join(e for e in patient_name if e.isalnum() or e in ['.', '-'])
+
+        email_address = patient_name_cleaned.lower() + "@gmail.com"
+
+        user = frappe.new_doc("User")
+        user.update({
+            "email": email_address,
+            "first_name": frappe.utils.get_fullname(patient_name),
+            "new_password": "Sigzen@123#",
+            "user_type": "System User"
+        })
+
+        user.insert()
+        user.add_roles("Patient")
  
-        
-    #     patient_name = doc.patient_name
-    #     user = frappe.new_doc("User")
-    #     user.update({
-    #     "email": patient_name + "@gmail.com",
-    #     "first_name": frappe.utils.get_fullname(patient_name),
-    #     "new_password": "Sigzen@123#",
-    #     "user_type":"System User"
-        
-    #     })
-    #     user.insert()
-    #     user.add_roles("Patient")
-
-

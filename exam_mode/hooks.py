@@ -93,6 +93,12 @@ fixtures = [
         "dt": "Website Slideshow"
     },
     {
+        "dt":"Test Type"
+    },
+    {
+        "dt":"Test Investigation"
+    },
+    {
         "dt": "Website Settings"
     },
     {
@@ -151,9 +157,10 @@ fixtures = [
 # Hook on document methods and events
 
 # doc_events = {
-#     "before_insert": "exam_mode.exam_mode.doctype.patient.patient.before_insert"
+#     "Payment Method": {
+#         "before_save": "exam_mode.exam_mode.doctype.payment_method.payment_method.before_save"
+#     }
 # }
-
 
 # Scheduled Tasks
 # ---------------

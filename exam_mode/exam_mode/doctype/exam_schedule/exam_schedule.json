@@ -12,14 +12,11 @@
   "date_of_birth",
   "age",
   "patient_gender",
-  "test_type",
-  "doctor",
   "column_break_hnwaa",
+  "test_type",
   "date_of_test",
   "time_of_test",
-  "status",
-  "testing_area",
-  "amended_from"
+  "testing_area"
  ],
  "fields": [
   {
@@ -27,8 +24,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient",
-   "reqd": 1
+   "options": "Patient"
   },
   {
    "fetch_from": "patient_name.date_of_birth",
@@ -47,23 +43,13 @@
    "fieldname": "date_of_test",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Date Of Test",
-   "reqd": 1
+   "label": "Date Of Test"
   },
   {
    "fieldname": "time_of_test",
    "fieldtype": "Time",
    "in_list_view": 1,
-   "label": "Time of Test",
-   "reqd": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "\nDraft\nPending\nApproved\nCancelled",
-   "read_only": 1
+   "label": "Time of Test"
   },
   {
    "fieldname": "testing_area",
@@ -75,28 +61,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "doctor",
-   "fieldtype": "Link",
-   "label": "Doctor",
-   "options": "Doctor"
-  },
-  {
-   "fetch_from": "patient_name.test_type",
    "fieldname": "test_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Test Type",
-   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes",
-   "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
    "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Exam Schedule",
-   "print_hide": 1,
-   "read_only": 1
+   "label": "Test Type",
+   "options": "Test Type"
   },
   {
    "fetch_from": "patient_name.age",
@@ -107,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 17:29:11.023641",
+ "modified": "2023-10-02 12:24:15.439271",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
