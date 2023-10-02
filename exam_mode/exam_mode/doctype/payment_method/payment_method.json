@@ -10,6 +10,7 @@
  "field_order": [
   "patient_name",
   "contact_no",
+  "test_type",
   "payment_method",
   "fee_amount",
   "section_break_wfqm1",
@@ -52,11 +53,17 @@
    "fieldtype": "Table",
    "label": "Online Payment",
    "options": "Online Payment"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Link",
+   "label": "Test Type",
+   "options": "Test Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-02 11:36:21.339082",
+ "modified": "2023-10-02 14:40:42.510754",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",

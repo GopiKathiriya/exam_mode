@@ -136,9 +136,10 @@ fixtures = [
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
-# }
+permission_query_conditions = {
+	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
+    # "Patient": "exam_mode.permission.patient.get_permission_query_for_exam",
+}
 #
 # has_permission = {
 #	"Event": "frappe.desk.doctype.event.event.has_permission",

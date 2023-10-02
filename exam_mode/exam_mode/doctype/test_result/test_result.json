@@ -10,11 +10,11 @@
  "field_order": [
   "patient_name",
   "age",
-  "test_type",
+  "patient_gender",
   "column_break_amvlb",
+  "test_type",
   "date_of_test",
   "result_date",
-  "patient_gender",
   "section_break_wiful",
   "test"
  ],
@@ -73,7 +73,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-02 12:45:52.422665",
+ "modified": "2023-10-02 15:21:14.504682",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",
@@ -91,6 +91,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient",
+   "share": 1
   }
  ],
  "sort_field": "modified",

@@ -15,3 +15,15 @@ def get_permission_query_for_patient(user=None):
         pass
 
 
+@frappe.whitelist()
+def get_permission_query_for_exam(user=None):
+    if not user:
+        user = frappe.session.user
+        user_roles = frappe.get_roles(user)
+    if user != 'Administrator' and 'Patient' in user_roles:
+ 
+        conditions=""" (`tabExam Schedule`.owner = '{user}')""".format(user=user)
+        return conditions
+    else:
+        pass
+
