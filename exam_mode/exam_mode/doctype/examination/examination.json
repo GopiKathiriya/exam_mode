@@ -11,7 +11,9 @@
   "patient_name",
   "doctor",
   "test_type",
-  "assign_the_examiner"
+  "assign_the_examiner",
+  "status",
+  "amended_from"
  ],
  "fields": [
   {
@@ -37,11 +39,30 @@
    "fieldtype": "Link",
    "label": "Doctor",
    "options": "Doctor"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nIn-Process\nComplete",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Examination",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-10-03 12:06:07.373018",
+ "modified": "2023-10-03 17:31:51.826167",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Examination",
@@ -59,6 +80,42 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Lab Technician",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",

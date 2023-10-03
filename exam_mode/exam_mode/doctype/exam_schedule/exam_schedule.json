@@ -14,7 +14,9 @@
   "column_break_hnwaa",
   "patient_gender",
   "assign_doctor",
-  "date_of_appointment"
+  "date_of_appointment",
+  "status",
+  "amended_from"
  ],
  "fields": [
   {
@@ -56,11 +58,29 @@
    "fieldname": "date_of_appointment",
    "fieldtype": "Datetime",
    "label": "Date/Time of Appointment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nSubmit\nReject",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Schedule",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-10-03 12:13:46.352888",
+ "modified": "2023-10-03 17:28:27.568626",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
@@ -86,6 +106,39 @@
    "read": 1,
    "report": 1,
    "role": "Patient",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Lab Technician",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
    "share": 1
   }
  ],

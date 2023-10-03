@@ -11,6 +11,7 @@ frappe.ui.form.on('Examination', {
                 new_test_result.patient_name = frm.doc.patient_name;
 				new_test_result.test_type = frm.doc.test_type;
 				
+				
                 frappe.set_route("Form", "Test Result", new_test_result.name);
             });
         }

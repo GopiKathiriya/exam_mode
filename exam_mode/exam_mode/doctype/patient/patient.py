@@ -17,20 +17,12 @@ class Patient(Document):
     # def before_insert(doc):
     #     if doc.doctype == "Patient":
     #         patient_name = doc.patient_name
-
-       
-    #     patient_name_cleaned = ''.join(e for e in patient_name if e.isalnum() or e in ['.', '-'])
-
-    #     email_address = patient_name_cleaned.lower() + "@gmail.com"
-
-    #     user = frappe.new_doc("User")
-    #     user.update({
-    #         "email": email_address,
-    #         "first_name": frappe.utils.get_fullname(patient_name),
-    #         "new_password": "Sigzen@123#",
-    #         "user_type": "System User"
+    #         user = frappe.new_doc("User")
+    #         user.update({
+    #             "email": patient_name + "@gmail.com",
+    #             "first_name": patient_name,
+    #             "new_password": "Sigzen@123#",
+    #             "user_type": "System User"
     #     })
-
     #     user.insert()
     #     user.add_roles("Patient")
- 
