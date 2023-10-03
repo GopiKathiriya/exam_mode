@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{patient_name}-{test_type}",
+ "autoname": "format:{patient_name}",
  "creation": "2023-09-28 11:57:07.088590",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,12 +11,10 @@
   "patient_name",
   "date_of_birth",
   "age",
-  "patient_gender",
   "column_break_hnwaa",
-  "test_type",
-  "date_of_test",
-  "time_of_test",
-  "testing_area"
+  "patient_gender",
+  "assign_doctor",
+  "date_of_appointment"
  ],
  "fields": [
   {
@@ -39,42 +37,30 @@
    "label": "Patient Gender"
   },
   {
-   "fieldname": "date_of_test",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date Of Test"
-  },
-  {
-   "fieldname": "time_of_test",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Time of Test"
-  },
-  {
-   "fieldname": "testing_area",
-   "fieldtype": "Data",
-   "label": "Testing Area"
-  },
-  {
    "fieldname": "column_break_hnwaa",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "test_type",
-   "fieldtype": "Link",
-   "label": "Test Type",
-   "options": "Test Type"
   },
   {
    "fetch_from": "patient_name.age",
    "fieldname": "age",
    "fieldtype": "Data",
    "label": "Age"
+  },
+  {
+   "fieldname": "assign_doctor",
+   "fieldtype": "Link",
+   "label": "Assign Doctor",
+   "options": "Doctor"
+  },
+  {
+   "fieldname": "date_of_appointment",
+   "fieldtype": "Datetime",
+   "label": "Date/Time of Appointment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-02 15:20:52.679564",
+ "modified": "2023-10-03 12:13:46.352888",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",

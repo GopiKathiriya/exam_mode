@@ -1,33 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{examiner}-{##}",
+ "autoname": "format:{examiner}-{examiner_name}-{#}",
  "creation": "2023-09-28 13:11:01.847594",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "scheduled_exam",
-  "examiner"
+  "examiner_name",
+  "examiner_post"
  ],
  "fields": [
   {
-   "fieldname": "scheduled_exam",
-   "fieldtype": "Link",
-   "label": "Scheduled Exam",
-   "options": "Exam Schedule"
+   "fieldname": "examiner_name",
+   "fieldtype": "Data",
+   "label": "Examiner Name"
   },
   {
-   "fieldname": "examiner",
-   "fieldtype": "Select",
-   "label": "Examiner",
-   "options": "\nDoctor\nMedical Staff"
+   "fieldname": "examiner_post",
+   "fieldtype": "Data",
+   "label": "Examiner Post"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 10:48:25.225063",
+ "modified": "2023-10-03 11:43:04.476018",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Assigned Examiner",
@@ -49,5 +47,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "examiner_post"
 }

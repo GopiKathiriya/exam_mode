@@ -3,7 +3,7 @@ from frappe import _
 
 def execute(filters=None):
     columns = get_columns()
-    data = get_data()
+    data = get_data(filters)
   
     return columns, data
    
@@ -23,19 +23,23 @@ def get_columns():
             'options': 'Test Type'
            
         },
-        {
-            'fieldname': 'time_of_test',
-            'label': 'Test Of Time',
-            'fieldtype': 'Time'
-        },
+        
        
     ]
     return columns
 
-def get_data():
-   
+def get_data(filters=None):
+    filter_list = []
 
-    data = frappe.db.get_list("Exam Schedule", fields=["patient_name","test_type","time_of_test"])
+    if filters and filters.get("patient_name"):
+        filter_list.append(["patient_name", "=", filters["patient_name"]])
+
+
+    if filters and filters.get("test_type"):
+        filter_list.append(["test_type", "=", filters["test_type"]])
+
+        
+    data = frappe.get_list("Examination",filters=filter_list, fields=["patient_name","test_type"])
   
 
     return data

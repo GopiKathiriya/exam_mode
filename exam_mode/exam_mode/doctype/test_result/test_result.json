@@ -13,7 +13,6 @@
   "patient_gender",
   "column_break_amvlb",
   "test_type",
-  "date_of_test",
   "result_date",
   "section_break_wiful",
   "test"
@@ -63,17 +62,11 @@
   {
    "fieldname": "column_break_amvlb",
    "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "exam_schedule.date_of_test",
-   "fieldname": "date_of_test",
-   "fieldtype": "Date",
-   "label": "Date Of Test"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-02 15:21:14.504682",
+ "modified": "2023-10-03 12:21:05.317979",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",
