@@ -1,37 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{first_name}-{last_name}-{##}",
+ "autoname": "format:Doctor-{doctor_name}",
  "creation": "2023-09-28 12:19:35.364255",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "first_name",
-  "last_name",
-  "full_name",
+  "doctor_name",
   "contact_information",
   "column_break_oebx9",
   "year_of_experience",
   "department"
  ],
  "fields": [
-  {
-   "fieldname": "first_name",
-   "fieldtype": "Data",
-   "label": "First Name"
-  },
-  {
-   "fieldname": "last_name",
-   "fieldtype": "Data",
-   "label": "Last Name"
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
   {
    "fieldname": "contact_information",
    "fieldtype": "Phone",
@@ -46,16 +29,21 @@
    "fieldname": "department",
    "fieldtype": "Select",
    "label": "Department",
-   "options": "\nmedicine\ncardiology\northopaedics\ndental"
+   "options": "\nGeneral\ncardiology\northopaedics\ndental"
   },
   {
    "fieldname": "column_break_oebx9",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-30 10:48:11.615629",
+ "modified": "2023-10-03 17:44:22.017030",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Doctor",
@@ -73,6 +61,34 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Receptionist",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Patient",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Doctor",
+   "select": 1,
+   "share": 1
   }
  ],
  "sort_field": "modified",

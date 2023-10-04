@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{patient_name}-{test_type}",
+ "autoname": "format:{patient_name}",
  "creation": "2023-09-28 11:57:07.088590",
  "default_view": "List",
  "doctype": "DocType",
@@ -11,14 +11,11 @@
   "patient_name",
   "date_of_birth",
   "age",
-  "patient_gender",
-  "test_type",
-  "doctor",
   "column_break_hnwaa",
-  "date_of_test",
-  "time_of_test",
+  "patient_gender",
+  "assign_doctor",
+  "date_of_appointment",
   "status",
-  "testing_area",
   "amended_from"
  ],
  "fields": [
@@ -27,8 +24,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient",
-   "reqd": 1
+   "options": "Patient"
   },
   {
    "fetch_from": "patient_name.date_of_birth",
@@ -39,55 +35,37 @@
   {
    "fetch_from": "patient_name.patient_gender",
    "fieldname": "patient_gender",
-   "fieldtype": "Select",
-   "label": "Patient Gender",
-   "options": "\nMale\nFemale"
-  },
-  {
-   "fieldname": "date_of_test",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date Of Test",
-   "reqd": 1
-  },
-  {
-   "fieldname": "time_of_test",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "Time of Test",
-   "reqd": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "\nDraft\nPending\nApproved\nCancelled",
-   "read_only": 1
-  },
-  {
-   "fieldname": "testing_area",
    "fieldtype": "Data",
-   "label": "Testing Area"
+   "label": "Patient Gender"
   },
   {
    "fieldname": "column_break_hnwaa",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "doctor",
+   "fetch_from": "patient_name.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "assign_doctor",
    "fieldtype": "Link",
-   "label": "Doctor",
+   "label": "Assign Doctor",
    "options": "Doctor"
   },
   {
-   "fetch_from": "patient_name.test_type",
-   "fieldname": "test_type",
+   "fieldname": "date_of_appointment",
+   "fieldtype": "Datetime",
+   "label": "Date/Time of Appointment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
    "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Test Type",
-   "options": "\nBlood Test\nX-Ray\nMRI\nDiabetes",
-   "reqd": 1
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nSubmit\nReject",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -97,17 +75,12 @@
    "options": "Exam Schedule",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fetch_from": "patient_name.age",
-   "fieldname": "age",
-   "fieldtype": "Data",
-   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-29 17:29:11.023641",
+ "modified": "2023-10-03 18:47:52.143186",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
@@ -132,8 +105,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Doctor",
+   "role": "Patient",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "report": 1,
+   "role": "Lab Technician",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -145,6 +129,7 @@
    "read": 1,
    "report": 1,
    "role": "Receptionist",
+   "select": 1,
    "share": 1,
    "write": 1
   },
@@ -154,7 +139,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Patient",
+   "role": "Doctor",
    "share": 1
   }
  ],

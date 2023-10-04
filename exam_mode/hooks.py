@@ -93,6 +93,12 @@ fixtures = [
         "dt": "Website Slideshow"
     },
     {
+        "dt":"Test Type"
+    },
+    {
+        "dt":"Test Investigation"
+    },
+    {
         "dt": "Website Settings"
     },
     {
@@ -130,9 +136,12 @@ fixtures = [
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
-# }
+permission_query_conditions = {
+	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
+    "Test Result": "exam_mode.permission.patient.get_permission_query_for_testresult",
+}
+
+
 #
 # has_permission = {
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -151,9 +160,10 @@ fixtures = [
 # Hook on document methods and events
 
 # doc_events = {
-#     "before_insert": "exam_mode.exam_mode.doctype.patient.patient.before_insert"
+#     "Payment Method": {
+#         "before_save": "exam_mode.exam_mode.doctype.payment_method.payment_method.before_save"
+#     }
 # }
-
 
 # Scheduled Tasks
 # ---------------

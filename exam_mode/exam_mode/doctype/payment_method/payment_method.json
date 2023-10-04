@@ -1,83 +1,72 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{patient_name}-{test_type}-{##}",
- "creation": "2023-09-30 11:24:21.748157",
+ "autoname": "format:{patient_name}-{test_type}",
+ "creation": "2023-09-30 14:55:19.576071",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "patient_name",
-  "age",
-  "patient_gender",
-  "column_break_amvlb",
+  "contact_no",
   "test_type",
-  "result_date",
-  "section_break_wiful",
-  "test",
-  "user"
+  "payment_method",
+  "fee_amount",
+  "section_break_wfqm1",
+  "online_payment"
  ],
  "fields": [
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "patient name",
+   "label": "Patient Name",
    "options": "Patient"
   },
   {
-   "fetch_from": "patient_name.age",
-   "fieldname": "age",
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "\nBy Cash\nOnline"
+  },
+  {
+   "fieldname": "fee_amount",
    "fieldtype": "Data",
-   "label": "Age"
+   "in_list_view": 1,
+   "label": "Fee Amount"
+  },
+  {
+   "fieldname": "section_break_wfqm1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "patient_name.contact_number",
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "depends_on": "eval:doc.payment_method == \"Online\"",
+   "fieldname": "online_payment",
+   "fieldtype": "Table",
+   "label": "Online Payment",
+   "options": "Online Payment"
   },
   {
    "fieldname": "test_type",
    "fieldtype": "Link",
    "label": "Test Type",
    "options": "Test Type"
-  },
-  {
-   "fetch_from": "exam_schedule.test_type",
-   "fieldname": "result_date",
-   "fieldtype": "Date",
-   "label": "Result Date"
-  },
-  {
-   "fetch_from": "patient_name.patient_gender",
-   "fieldname": "patient_gender",
-   "fieldtype": "Data",
-   "label": " Patient Gender"
-  },
-  {
-   "fieldname": "section_break_wiful",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "test",
-   "fieldtype": "Table",
-   "label": "Test",
-   "options": "Test"
-  },
-  {
-   "fieldname": "column_break_amvlb",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "patient_name.patient_name",
-   "fieldname": "user",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-04 15:58:26.247152",
+ "modified": "2023-10-03 16:07:36.340345",
  "modified_by": "Administrator",
  "module": "exam_mode",
- "name": "Test Result",
+ "name": "Payment Method",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -103,6 +92,15 @@
    "share": 1
   },
   {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "share": 1
+  },
+  {
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -111,18 +109,20 @@
    "read": 1,
    "report": 1,
    "role": "Lab Technician",
-   "select": 1,
    "share": 1,
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Doctor",
-   "share": 1
+   "role": "Receptionist",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",

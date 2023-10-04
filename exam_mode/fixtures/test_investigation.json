@@ -1,0 +1,110 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Hemoglobin",
+  "modified": "2023-09-30 18:07:26.273609",
+  "name": "Blood Test-Hemoglobin",
+  "reference_value": "11.0 - 15.0",
+  "test_type": "Blood Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "RBC",
+  "modified": "2023-09-30 18:08:35.950296",
+  "name": "Blood Test-RBC",
+  "reference_value": "3.5 - 5.50",
+  "test_type": "Blood Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "MCV",
+  "modified": "2023-09-30 18:09:36.665498",
+  "name": "Blood Test-MCV",
+  "reference_value": "82 - 95",
+  "test_type": "Blood Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "MCH",
+  "modified": "2023-09-30 18:09:59.077988",
+  "name": "Blood Test-MCH",
+  "reference_value": "27 - 31",
+  "test_type": "Blood Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Hemoglobin",
+  "modified": "2023-09-30 18:12:41.462110",
+  "name": "Sugar Test-Hemoglobin",
+  "reference_value": "11.0 - 15.0",
+  "test_type": "Sugar Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Sodium",
+  "modified": "2023-09-30 18:13:08.678974",
+  "name": "Sugar Test-Sodium",
+  "reference_value": "10.0 - 15.0",
+  "test_type": "Sugar Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Chioride",
+  "modified": "2023-09-30 18:13:34.939937",
+  "name": "Sugar Test-Chioride",
+  "reference_value": "3.0 - 7.5",
+  "test_type": "Sugar Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Anion Gap",
+  "modified": "2023-09-30 18:14:03.627813",
+  "name": "Sugar Test-Anion Gap",
+  "reference_value": "30.0 - 45.0",
+  "test_type": "Sugar Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Epinephrine",
+  "modified": "2023-09-30 18:15:24.985252",
+  "name": "Urine Test-Epinephrine",
+  "reference_value": "0 - 20",
+  "test_type": "Urine Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Metanephrine",
+  "modified": "2023-09-30 18:15:58.468726",
+  "name": "Urine Test-Metanephrine",
+  "reference_value": "0 - 1000",
+  "test_type": "Urine Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Dopamine",
+  "modified": "2023-09-30 18:16:21.574149",
+  "name": "Urine Test-Dopamine",
+  "reference_value": "65 - 400",
+  "test_type": "Urine Test"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Test Investigation",
+  "investigation": "Norepinephrine",
+  "modified": "2023-09-30 18:17:23.511472",
+  "name": "Urine Test-Norepinephrine",
+  "reference_value": "15 - 80",
+  "test_type": "Urine Test"
+ }
+]

@@ -9,24 +9,18 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-09-29 18:21:16.399420",
+ "modified": "2023-10-02 17:34:02.589775",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",
  "owner": "Administrator",
  "prepared_report": 0,
- "ref_doctype": "Fee Collection",
+ "ref_doctype": "Payment Method",
  "report_name": "Payment Method",
  "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
-  },
-  {
-   "role": "Doctor"
-  },
-  {
-   "role": "Receptionist"
   }
  ]
 }

@@ -15,3 +15,23 @@ def get_permission_query_for_patient(user=None):
         pass
 
 
+@frappe.whitelist()
+def get_permission_query_for_testresult(user=None):
+    if not user:
+        user = frappe.session.user
+    name=frappe.db.get_value("User",user,"full_name")
+    user_roles = frappe.get_roles(user)  
+    if user != 'Administrator' and 'Patient' in user_roles:
+        conditions = """(`tabTest Result`.user = '{abc}')""".format(abc=name)
+        return conditions
+    else:
+        pass
+
+
+
+ 
+     
+    
+
+
+

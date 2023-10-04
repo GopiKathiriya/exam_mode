@@ -3,59 +3,43 @@ from frappe import _
 
 def execute(filters=None):
     columns = get_columns()
-    data = get_gym_member(filters)
-    labels = []
-    values = []
-    for k in data:
-        labels.append(k['test_type'])
-        values.append(k['count'])
-        chart = {
-        "type": "bar",
-        "data": {
-			"labels": labels,
-			"datasets": [
-				    {"values": values},	
-        	],
-        },
-    }
-    return columns, data, "summary report", chart
+    data = get_data(filters)
   
+    return columns, data
    
 
 def get_columns():
     columns = [
         {
-            'fieldname': 'test_type',
-            'label': 'Test Type',
-            'fieldtype': 'Data'
-           
+             'fieldname': 'patient_name',
+            'label': 'Patinet Name',
+            'fieldtype': 'Link',
+            'options': 'Patient'
         },
         {
-            'fieldname': 'count',
-            'label': 'Count',
-            'fieldtype': 'Int'
+            'fieldname': 'test_type',
+            'label': 'Test Type',
+            'fieldtype': 'Link',
+            'options': 'Test Type'
+           
         },
-      
+        
+       
     ]
     return columns
 
-def get_gym_member(filters=None):
-    class_counts = {
-        "Blood Test": 0,
-        "MRI": 0,
-        "X-Ray": 0,
-        "Diabetes":0
-    }
+def get_data(filters=None):
+    filter_list = []
 
-    data1 = frappe.db.get_list("Exam Schedule", fields=["test_type",])
-    for exam_schedule in data1:
-        test_type = exam_schedule.get("test_type")
-        if test_type in class_counts:
-            class_counts[test_type] += 1
-        else :
-            class_counts[test_type] = 1
-    data = []
-    for test_type, count in class_counts.items():
-        data.append({"test_type": test_type, "count": count})
+    if filters and filters.get("patient_name"):
+        filter_list.append(["patient_name", "=", filters["patient_name"]])
+
+
+    if filters and filters.get("test_type"):
+        filter_list.append(["test_type", "=", filters["test_type"]])
+
+        
+    data = frappe.get_list("Examination",filters=filter_list, fields=["patient_name","test_type"])
+  
 
     return data

@@ -1,36 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{patient_name}-{test_type}-{##}",
- "creation": "2023-09-30 11:24:21.748157",
+ "autoname": "format:{patient_name}-{test_type}",
+ "creation": "2023-10-03 11:14:38.267643",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "patient_name",
-  "age",
-  "patient_gender",
-  "column_break_amvlb",
+  "doctor",
   "test_type",
-  "result_date",
-  "section_break_wiful",
-  "test",
+  "assign_the_examiner",
+  "status",
+  "amended_from",
   "user"
  ],
  "fields": [
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "patient name",
+   "label": "Patient Name",
    "options": "Patient"
-  },
-  {
-   "fetch_from": "patient_name.age",
-   "fieldname": "age",
-   "fieldtype": "Data",
-   "label": "Age"
   },
   {
    "fieldname": "test_type",
@@ -39,33 +30,36 @@
    "options": "Test Type"
   },
   {
-   "fetch_from": "exam_schedule.test_type",
-   "fieldname": "result_date",
-   "fieldtype": "Date",
-   "label": "Result Date"
+   "fieldname": "assign_the_examiner",
+   "fieldtype": "Link",
+   "label": "Assign the Examiner",
+   "options": "Assigned Examiner"
   },
   {
-   "fetch_from": "patient_name.patient_gender",
-   "fieldname": "patient_gender",
-   "fieldtype": "Data",
-   "label": " Patient Gender"
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
   },
   {
-   "fieldname": "section_break_wiful",
-   "fieldtype": "Section Break"
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nIn-Process\nComplete",
+   "read_only": 1
   },
   {
-   "fieldname": "test",
-   "fieldtype": "Table",
-   "label": "Test",
-   "options": "Test"
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Examination",
+   "print_hide": 1,
+   "read_only": 1
   },
   {
-   "fieldname": "column_break_amvlb",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "patient_name.patient_name",
    "fieldname": "user",
    "fieldtype": "Data",
    "hidden": 1,
@@ -73,11 +67,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-10-04 15:58:26.247152",
+ "modified": "2023-10-04 16:22:26.733570",
  "modified_by": "Administrator",
  "module": "exam_mode",
- "name": "Test Result",
+ "name": "Examination",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -99,8 +94,11 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Patient",
-   "share": 1
+   "role": "Lab Technician",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
   },
   {
    "create": 1,
@@ -110,9 +108,10 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Lab Technician",
+   "role": "Doctor",
    "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -121,7 +120,8 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Doctor",
+   "role": "Patient",
+   "select": 1,
    "share": 1
   }
  ],

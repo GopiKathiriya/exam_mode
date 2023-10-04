@@ -9,24 +9,18 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-09-29 18:21:04.986821",
+ "modified": "2023-10-03 12:38:41.741816",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Summary report",
  "owner": "Administrator",
  "prepared_report": 0,
- "ref_doctype": "Exam Schedule",
+ "ref_doctype": "Examination",
  "report_name": "Summary report",
  "report_type": "Script Report",
  "roles": [
   {
    "role": "System Manager"
-  },
-  {
-   "role": "Doctor"
-  },
-  {
-   "role": "Receptionist"
   }
  ]
 }

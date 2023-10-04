@@ -5,17 +5,23 @@
 frappe.query_reports["Payment Method"] = {
 	"filters": [
 		{
+			'fieldname': 'patient_name',
+			'label': 'Patient Name',
+			'fieldtype': 'Link',
+			'options': 'Patient'
+		},
+		{
 			'fieldname': 'payment_method',
 			'label': 'Payment Method',
 			'fieldtype': 'Select',
-			'options': ['Cash On Delivery','Online']
+			'options': ['By Cash','Online']
 		},
-		{
-			'fieldname': 'test_type',
-			'label': 'Test Type',
-			'fieldtype': 'Select',
-			'options':['Blood Test','X-ray','MRI','Diabetes']
-		},
+		// {
+		// 	'fieldname': 'test_type',
+		// 	'label': 'Test Type',
+		// 	'fieldtype': 'Link',
+		// 	'options': 'Test Type'
+		// },
 
 	]
 };

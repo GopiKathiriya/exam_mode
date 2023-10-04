@@ -2,6 +2,24 @@
  {
   "docstatus": 0,
   "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-03 15:43:27.375691",
+  "name": "IN-Process",
+  "style": "",
+  "workflow_state_name": "IN-Process"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-10-03 15:44:01.959160",
+  "name": "Complete",
+  "style": "",
+  "workflow_state_name": "Complete"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
   "icon": "question-sign",
   "modified": "2023-09-28 11:38:58.103298",
   "name": "Pending",

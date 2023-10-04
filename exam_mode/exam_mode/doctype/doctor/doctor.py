@@ -5,6 +5,4 @@
 from frappe.model.document import Document
 
 class Doctor(Document):
-	def before_save(self):
-		self.full_name = self.first_name + ' ' + self.last_name
-    
+	pass
