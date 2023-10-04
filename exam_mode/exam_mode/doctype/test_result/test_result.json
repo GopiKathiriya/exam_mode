@@ -15,7 +15,8 @@
   "test_type",
   "result_date",
   "section_break_wiful",
-  "test"
+  "test",
+  "user"
  ],
  "fields": [
   {
@@ -62,11 +63,18 @@
   {
    "fieldname": "column_break_amvlb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient_name.patient_name",
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-03 17:48:49.215113",
+ "modified": "2023-10-04 15:58:26.247152",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",
