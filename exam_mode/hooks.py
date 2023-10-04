@@ -140,7 +140,10 @@ permission_query_conditions = {
 	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
 }
 {
-    "Patient": "exam_mode.permission.patient.get_permission_query_for_testresult",
+    "Test Result": "exam_mode.permission.patient.get_permission_query_for_testresult",
+}
+{
+    "Examination": "exam_mode.permission.patient.get_permission_query_for_examination",
 }
 
 #

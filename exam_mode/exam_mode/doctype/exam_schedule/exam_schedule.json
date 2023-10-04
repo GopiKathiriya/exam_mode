@@ -80,7 +80,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-03 17:28:27.568626",
+ "modified": "2023-10-03 18:47:52.143186",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",
@@ -129,6 +129,7 @@
    "read": 1,
    "report": 1,
    "role": "Receptionist",
+   "select": 1,
    "share": 1,
    "write": 1
   },

@@ -66,7 +66,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-03 16:06:15.525649",
+ "modified": "2023-10-03 17:48:49.215113",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",
@@ -103,6 +103,7 @@
    "read": 1,
    "report": 1,
    "role": "Lab Technician",
+   "select": 1,
    "share": 1,
    "write": 1
   },

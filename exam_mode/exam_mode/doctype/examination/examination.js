@@ -5,6 +5,7 @@ frappe.ui.form.on('Examination', {
 	refresh: function(frm) {
         if (frm.doc.__islocal) {
             frm.page.clear_inner_toolbar();
+            
         } else {
             frm.add_custom_button(__('Go To Test Result'), function() {
                 var new_test_result = frappe.model.get_new_doc("Test Result");

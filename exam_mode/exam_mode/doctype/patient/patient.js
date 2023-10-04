@@ -3,11 +3,16 @@
 
 frappe.ui.form.on('Patient', {
 	// refresh: function(frm) {
-	// 	frm.add_custom_button('Go To Exam Schedule', () => {
-	// 		frappe.new_doc('Exam Schedule', {
-	// 			patient: frm.doc.name 
-	// 		});
-	// 	});
-
-	// }
+    //     if (frm.doc.__islocal) {
+    //         frm.page.clear_inner_toolbar();
+    //     } else {
+    //         frm.add_custom_button(__('Go To Exam Schedule'), function() {
+    //             var new_exam_schedule= frappe.model.get_new_doc("Exam Schedule");
+    //             new_exam_schedule.patient_name = frm.doc.patient_name;
+				
+				
+    //             frappe.set_route("Form", "Exam Schedule", new_exam_schedule.name);
+    //         });
+    //     }
+    
 });

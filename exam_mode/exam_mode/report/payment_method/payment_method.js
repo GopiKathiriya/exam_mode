@@ -16,12 +16,12 @@ frappe.query_reports["Payment Method"] = {
 			'fieldtype': 'Select',
 			'options': ['By Cash','Online']
 		},
-		{
-			'fieldname': 'test_type',
-			'label': 'Test Type',
-			'fieldtype': 'Link',
-			'options': 'Test Type'
-		},
+		// {
+		// 	'fieldname': 'test_type',
+		// 	'label': 'Test Type',
+		// 	'fieldtype': 'Link',
+		// 	'options': 'Test Type'
+		// },
 
 	]
 };
