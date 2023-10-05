@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{examiner}-{examiner_name}-{#}",
+ "autoname": "format:{examiner_name}-{#}",
  "creation": "2023-09-28 13:11:01.847594",
  "default_view": "List",
  "doctype": "DocType",
@@ -25,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-03 16:18:06.269735",
+ "modified": "2023-10-05 14:35:05.807709",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Assigned Examiner",

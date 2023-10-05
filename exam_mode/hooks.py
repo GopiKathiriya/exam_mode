@@ -6,6 +6,7 @@ app_publisher = "frappe"
 app_description = "exam_mode"
 app_email = "frappe@gmail.com"
 app_license = "MIT"
+required_apps = ["erpnext"]
 app_logo_url = "/assets/exam_mode/img/aaaa.jpg"
 # Includes in <head>
 # ------------------
@@ -83,13 +84,6 @@ app_logo_url = "/assets/exam_mode/img/aaaa.jpg"
 
 fixtures = [
     {
-        "dt": "Custom DocPerm",
-        "filter": [
-            ["role", "in", ["Doctor", "Patient", "Receptionist"]],
-            ["parent", "in", ["Patient", "Exam Schedule", "Fee Collection","Assign Examiner","Exam Result","Grading Scale","Doctor","Medical Staff","Feedback Form"]]
-        ]
-    },
-    {
         "dt": "Website Slideshow"
     },
     {
@@ -107,10 +101,17 @@ fixtures = [
     {
         "dt": "Workflow State"
     },
- 
     {
-        "dt": "Dashboard"
-        
+        "dt": "Dashboard"    
+    },
+    {
+        "dt":"Role"
+    },
+    {
+        "dt":"Role Profile"
+    },
+    {
+        "dt":"Module Profile"
     }
 ]
 
