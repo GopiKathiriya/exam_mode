@@ -12,11 +12,11 @@ app_logo_url = "/assets/exam_mode/img/aaaa.jpg"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/exam_mode/css/exam_mode.css"
+app_include_css = "/assets/exam_mode/css/test.css"
 # app_include_js = "/assets/exam_mode/js/exam_mode.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/exam_mode/css/exam_mode.css"
+web_include_css = "/assets/exam_mode/css/test.css"
 # web_include_js = "/assets/exam_mode/js/exam_mode.js"
 
 # include custom scss in every website theme (without file extension ".scss")

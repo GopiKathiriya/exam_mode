@@ -32,9 +32,9 @@ class Patient(Document):
                 "first_name": patient_name,
                 "new_password": "Sigzen@123#",
                 "user_type": "System User",
-                "role_profile_name":"patient role profile",
-                "module_profile":"exam_mode_profile"
+                # "role_profile_name":"patient role profile",
+                # "module_profile":"exam_mode_profile"
             })
-            user.save(ignore_permissions=True)
+            # user.save(ignore_permissions=True)
             user.add_roles("Patient")
-            user.save(ignore_permissions=True)
+            # user.save(ignore_permissions=True)
