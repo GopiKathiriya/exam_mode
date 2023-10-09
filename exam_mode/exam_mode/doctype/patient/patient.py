@@ -35,6 +35,6 @@ class Patient(Document):
                 "role_profile_name":"patient role profile",
                 "module_profile":"exam_mode_profile"
             })
-            user.save(ignore_permissions=True)
+            #user.save(ignore_permissions=True)
             user.add_roles("Patient")
-            user.save(ignore_permissions=True)
+            #user.save(ignore_permissions=True)

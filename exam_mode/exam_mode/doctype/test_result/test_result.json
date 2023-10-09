@@ -24,7 +24,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "patient name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fetch_from": "patient_name.age",
@@ -42,7 +43,8 @@
    "fetch_from": "exam_schedule.test_type",
    "fieldname": "result_date",
    "fieldtype": "Date",
-   "label": "Result Date"
+   "label": "Result Date",
+   "reqd": 1
   },
   {
    "fetch_from": "patient_name.patient_gender",
@@ -74,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-04 15:58:26.247152",
+ "modified": "2023-10-09 10:59:21.102310",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Test Result",
