@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-10-03 12:38:41.741816",
+ "modified": "2023-10-06 17:39:30.728075",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Summary report",
@@ -21,6 +21,12 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Doctor"
+  },
+  {
+   "role": "Lab Technician"
   }
  ]
 }
