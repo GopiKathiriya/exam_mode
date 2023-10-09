@@ -24,9 +24,7 @@ class Patient(Document):
    
     def before_insert(doc, method=None):
         if doc.doctype == "Patient":
-            print("abc")
             patient_name = doc.patient_name
-            print("Hii")
             email = patient_name.replace(" ", "") + "@gmail.com"    
             
             user = frappe.new_doc("User")
@@ -34,12 +32,19 @@ class Patient(Document):
                 "email": email,
                 "first_name": patient_name,
                 "new_password": "Sigzen@123#",
-                "user_type": "System User",
-                "role_profile_name": "patient role profile",
-                "module_profile": "exam_mode_profile"
+                "user_type": "System User"
             })
-            print("aaa")
-            user.save(ignore_permissions=True)            
-            user.add_roles("Patient")                        
-            user.save(ignore_permissions=True)
+            
+            try:
+                user.save(ignore_permissions=True)
+                
+                patient_role = frappe.get_doc("Role", "Patient")
+                if patient_role:
+                    user.add_roles("Patient")
+                    user.save(ignore_permissions=True)
+                    frappe.msgprint(f"Patient role added to user {user.name}")
+                else:
+                    frappe.msgprint("Patient role does not exist in the system")
+            except Exception as e:
+                frappe.msgprint(f"Error creating user: {e}")
 
