@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-10-06 17:39:30.728075",
+ "modified": "2023-10-09 12:04:52.191982",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Summary report",
@@ -27,6 +27,12 @@
   },
   {
    "role": "Lab Technician"
+  },
+  {
+   "role": "Patient"
+  },
+  {
+   "role": "Receptionist"
   }
  ]
 }

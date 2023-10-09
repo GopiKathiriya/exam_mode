@@ -6,6 +6,7 @@ frappe.ui.form.on('Test Result', {
         if (frm.doc.__islocal) {
             frm.page.clear_inner_toolbar();
         } else {
+            if (frappe.user.has_role('Lab Technician')) {
             frm.add_custom_button(__('Go To Payment'), function() {
                 var new_payment_method = frappe.model.get_new_doc("Payment Method");
                 new_payment_method.patient_name = frm.doc.patient_name;
@@ -13,6 +14,7 @@ frappe.ui.form.on('Test Result', {
                 frappe.set_route("Form", "Payment Method", new_payment_method.name);
             });
         }
+    }
     },
     test_type: function (frm) {
         console.log("hey");
