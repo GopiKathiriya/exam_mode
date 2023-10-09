@@ -22,14 +22,16 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Payment Method",
-   "options": "\nBy Cash\nOnline"
+   "options": "\nBy Cash\nOnline",
+   "reqd": 1
   },
   {
    "fieldname": "fee_amount",
@@ -63,7 +65,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-03 16:07:36.340345",
+ "modified": "2023-10-09 10:59:41.691879",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",

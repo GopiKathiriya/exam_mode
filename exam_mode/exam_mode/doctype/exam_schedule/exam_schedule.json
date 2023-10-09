@@ -24,7 +24,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fetch_from": "patient_name.date_of_birth",
@@ -52,7 +53,8 @@
    "fieldname": "assign_doctor",
    "fieldtype": "Link",
    "label": "Assign Doctor",
-   "options": "Doctor"
+   "options": "Doctor",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_appointment",
@@ -80,7 +82,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-06 17:21:36.085365",
+ "modified": "2023-10-09 10:58:31.512830",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",

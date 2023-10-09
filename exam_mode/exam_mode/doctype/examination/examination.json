@@ -20,8 +20,10 @@
   {
    "fieldname": "patient_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient"
+   "options": "Patient",
+   "reqd": 1
   },
   {
    "fieldname": "test_type",
@@ -32,8 +34,10 @@
   {
    "fieldname": "assign_the_examiner",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Assign the Examiner",
-   "options": "Assigned Examiner"
+   "options": "Assigned Examiner",
+   "reqd": 1
   },
   {
    "fieldname": "doctor",
@@ -69,7 +73,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-05 17:36:17.286696",
+ "modified": "2023-10-09 11:00:05.828480",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Examination",
