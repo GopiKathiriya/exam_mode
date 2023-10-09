@@ -24,17 +24,22 @@ class Patient(Document):
    
     def before_insert(doc, method=None):
         if doc.doctype == "Patient":
+            print("abc")
             patient_name = doc.patient_name
+            print("Hii")
             email = patient_name.replace(" ", "") + "@gmail.com"    
+            
             user = frappe.new_doc("User")
             user.update({
                 "email": email,
                 "first_name": patient_name,
                 "new_password": "Sigzen@123#",
                 "user_type": "System User",
-                "role_profile_name":"patient role profile",
-                "module_profile":"exam_mode_profile"
+                "role_profile_name": "patient role profile",
+                "module_profile": "exam_mode_profile"
             })
+            print("aaa")
+            user.save(ignore_permissions=True)            
+            user.add_roles("Patient")                        
             user.save(ignore_permissions=True)
-            user.add_roles("Patient")
-            user.save(ignore_permissions=True)
+
