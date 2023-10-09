@@ -140,6 +140,7 @@ fixtures = [
 permission_query_conditions = {
 	"Patient": "exam_mode.permission.patient.get_permission_query_for_patient",
     "Test Result": "exam_mode.permission.patient.get_permission_query_for_testresult",
+    
 }
 
 

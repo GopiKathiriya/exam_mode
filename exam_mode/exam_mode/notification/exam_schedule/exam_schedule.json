@@ -1,0 +1,27 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "creation": "2023-10-09 17:02:54.717815",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Exam Schedule",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2023-10-09 17:02:54.717815",
+ "modified_by": "Administrator",
+ "module": "exam_mode",
+ "name": "Exam Schedule",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Doctor"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Exam Schedule{{doc.name}}"
+}
