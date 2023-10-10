@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{patient_name}-{feedback_comment}",
  "creation": "2023-09-28 12:15:20.015183",
  "default_view": "List",
  "doctype": "DocType",
@@ -15,9 +15,8 @@
  "fields": [
   {
    "fieldname": "patient_name",
-   "fieldtype": "Link",
-   "label": "Patient Name",
-   "options": "Patient"
+   "fieldtype": "Data",
+   "label": "Patient Name"
   },
   {
    "fieldname": "exam_experience_rating",
@@ -32,11 +31,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-03 16:10:25.452955",
+ "modified": "2023-10-10 10:51:35.873534",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Feedback Form",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
