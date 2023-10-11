@@ -11,8 +11,9 @@
   "patient_name",
   "date_of_birth",
   "age",
-  "column_break_hnwaa",
   "patient_gender",
+  "column_break_hnwaa",
+  "test_type",
   "assign_doctor",
   "date_of_appointment",
   "status",
@@ -77,12 +78,18 @@
    "options": "Exam Schedule",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Link",
+   "label": "Test Type",
+   "options": "Test Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 16:03:07.560911",
+ "modified": "2023-10-11 15:26:10.210595",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",

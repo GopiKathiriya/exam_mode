@@ -23,7 +23,7 @@
    "in_list_view": 1,
    "label": "Patient Name",
    "options": "Patient",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "payment_method",
@@ -65,7 +65,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 10:59:41.691879",
+ "modified": "2023-10-11 15:14:52.650929",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",
