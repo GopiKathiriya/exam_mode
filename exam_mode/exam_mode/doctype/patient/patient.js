@@ -1,18 +1,17 @@
-// Copyright (c) 2023, frappe and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on('Patient', {
-	// refresh: function(frm) {
-    //     if (frm.doc.__islocal) {
-    //         frm.page.clear_inner_toolbar();
-    //     } else {
-    //         frm.add_custom_button(__('Go To Exam Schedule'), function() {
-    //             var new_exam_schedule= frappe.model.get_new_doc("Exam Schedule");
-    //             new_exam_schedule.patient_name = frm.doc.patient_name;
-				
-				
-    //             frappe.set_route("Form", "Exam Schedule", new_exam_schedule.name);
-    //         });
-    //     }
-    
+    refresh: function(frm) {
+        frm.fields_dict['date_of_birth'].df.onchange = function() {
+            var date_of_birth = frm.doc.date_of_birth;
+            if (date_of_birth) {	
+                var today = new Date();
+                var birthDate = new Date(date_of_birth);
+                var ageDate = new Date(today - birthDate);
+                var years = ageDate.getUTCFullYear() - 1970;
+                var months = ageDate.getUTCMonth();
+                var days = ageDate.getUTCDate() - 1;
+
+                frm.set_value('age', years + ' years, ' + months + ' months, ' + days + ' days');
+            }
+        }
+    }
 });

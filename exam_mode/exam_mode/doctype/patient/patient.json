@@ -21,8 +21,7 @@
    "fieldname": "patient_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Patient Name",
-   "reqd": 1
+   "label": "Patient Name"
   },
   {
    "fieldname": "date_of_birth",
@@ -35,7 +34,7 @@
    "fieldname": "patient_gender",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Patient Gender",
+   "label": "Gender",
    "options": "\nMale\nFemale",
    "reqd": 1
   },
@@ -59,13 +58,12 @@
   {
    "fieldname": "age",
    "fieldtype": "Data",
-   "label": "Age",
-   "read_only": 1
+   "label": "Age"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-09 10:58:03.828561",
+ "modified": "2023-10-11 14:28:03.879805",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Patient",

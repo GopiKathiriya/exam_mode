@@ -22,8 +22,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Patient Name",
-   "options": "Patient",
-   "reqd": 1
+   "options": "Patient"
   },
   {
    "fieldname": "test_type",
@@ -71,9 +70,8 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-10-09 11:00:05.828480",
+ "modified": "2023-10-11 15:24:37.970206",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Examination",
@@ -101,7 +99,6 @@
    "role": "Lab Technician",
    "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -115,7 +112,6 @@
    "role": "Doctor",
    "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
