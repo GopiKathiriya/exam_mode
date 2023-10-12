@@ -14,7 +14,8 @@
   "payment_method",
   "fee_amount",
   "section_break_wfqm1",
-  "online_payment"
+  "online_payment",
+  "bank_transfer"
  ],
  "fields": [
   {
@@ -30,7 +31,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Payment Method",
-   "options": "\nBy Cash\nOnline",
+   "options": "\nBy Cash\nCredit Card\nBank Transfer",
    "reqd": 1
   },
   {
@@ -50,7 +51,7 @@
    "label": "Contact No"
   },
   {
-   "depends_on": "eval:doc.payment_method == \"Online\"",
+   "depends_on": "eval:doc.payment_method == \"Credit Card\"",
    "fieldname": "online_payment",
    "fieldtype": "Table",
    "label": "Online Payment",
@@ -61,11 +62,18 @@
    "fieldtype": "Link",
    "label": "Test Type",
    "options": "Test Type"
+  },
+  {
+   "depends_on": "eval:doc.payment_method == \"Bank Transfer\"",
+   "fieldname": "bank_transfer",
+   "fieldtype": "Table",
+   "label": "Bank Transfer",
+   "options": "Bank Transfer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 15:14:52.650929",
+ "modified": "2023-10-12 16:37:24.439861",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Payment Method",

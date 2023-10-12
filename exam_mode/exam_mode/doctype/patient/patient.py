@@ -30,7 +30,6 @@ class Patient(Document):
         if doc.doctype == "Patient":
             patient_name = doc.patient_name
             email = patient_name.replace(" ", "") + "@gmail.com"
-            
             user = frappe.new_doc("User")
             user.update({
                 "email": email,

@@ -16,6 +16,14 @@ frappe.ui.form.on('Test Result', {
         }
     }
     },
+    result_date: function(frm) {
+        const resultDate = frappe.datetime.get_diff(frm.doc.result_date, frappe.datetime.nowdate());
+        
+        if (resultDate < 0) {
+            frappe.msgprint(__("Result Date cannot be in the past."));
+            frm.set_value('result_date', ''); 
+        }
+    },
     test_type: function (frm) {
         console.log("hey");
         if (frm.doc.test_type) {

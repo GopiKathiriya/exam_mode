@@ -16,6 +16,7 @@
   "test_type",
   "assign_doctor",
   "date_of_appointment",
+  "consulting_fee",
   "status",
   "amended_from"
  ],
@@ -84,12 +85,17 @@
    "fieldtype": "Link",
    "label": "Test Type",
    "options": "Test Type"
+  },
+  {
+   "fieldname": "consulting_fee",
+   "fieldtype": "Currency",
+   "label": "Consulting Fee"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-11 15:26:10.210595",
+ "modified": "2023-10-12 16:40:14.994898",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Exam Schedule",

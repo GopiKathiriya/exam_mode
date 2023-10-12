@@ -7,8 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "credit_card_number",
+  "card_type",
   "billing_address",
-  "city",
   "expiry_date"
  ],
  "fields": [
@@ -23,20 +23,21 @@
    "label": "Billing Address"
   },
   {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City"
-  },
-  {
    "fieldname": "expiry_date",
    "fieldtype": "Date",
    "label": "Expiry Date"
+  },
+  {
+   "fieldname": "card_type",
+   "fieldtype": "Select",
+   "label": "Card Type",
+   "options": "\nVisa\nMasterCard\nAmerican Express"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-30 18:33:53.687373",
+ "modified": "2023-10-12 16:33:07.050462",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Online Payment",

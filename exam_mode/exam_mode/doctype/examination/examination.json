@@ -71,7 +71,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-11 15:24:37.970206",
+ "modified": "2023-10-11 18:58:30.152175",
  "modified_by": "Administrator",
  "module": "exam_mode",
  "name": "Examination",
@@ -93,7 +93,6 @@
   {
    "email": 1,
    "export": 1,
-   "print": 1,
    "read": 1,
    "report": 1,
    "role": "Lab Technician",
@@ -106,7 +105,6 @@
    "delete": 1,
    "email": 1,
    "export": 1,
-   "print": 1,
    "read": 1,
    "report": 1,
    "role": "Doctor",
@@ -117,7 +115,6 @@
   {
    "email": 1,
    "export": 1,
-   "print": 1,
    "read": 1,
    "report": 1,
    "role": "Patient",
